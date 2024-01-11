@@ -84,9 +84,6 @@ for action in actions:
             print(f"Error creating directory {new_dir_path}: {e}")
 
 
-
-
-
             
 cap = cv2.VideoCapture(0)
 # Set mediapipe model 
