@@ -88,8 +88,7 @@ for action in actions:
 cap = cv2.VideoCapture(0)
 # Set mediapipe model 
 with mp_holistic.Holistic(min_detection_confidence=0, min_tracking_confidence=0) as holistic:
-    
-    # NEW LOOP
+
     # Loop through actions
     for action in actions:
         # Loop through sequences aka videos
@@ -97,7 +96,7 @@ with mp_holistic.Holistic(min_detection_confidence=0, min_tracking_confidence=0)
             # Loop through video length aka sequence length
             for frame_num in range(sequence_length):
 
-                # Read feed
+               
                 ret, frame = cap.read()
 
                 # Make detections
