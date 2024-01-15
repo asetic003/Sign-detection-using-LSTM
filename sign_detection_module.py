@@ -67,7 +67,7 @@ no_sequences = 30
 sequence_length = 30
 
 # Folder start
-start_folder = 30
+start_folder = 0
 
 for action in actions:
     dir_path = os.path.join(DATA_PATH, action)
