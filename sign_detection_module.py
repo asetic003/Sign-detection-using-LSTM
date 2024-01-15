@@ -58,7 +58,7 @@ def extract_keypoints(results):
 DATA_PATH = os.path.join('MP_Data') 
 
 # Actions that we try to detect
-actions = np.array(['hello', 'thanks', 'iloveyou','milk','father','mother', 'fine'])
+actions = np.array(['thanks', 'iloveyou','milk','father','mother', 'fine'])
 
 # Thirty videos worth of data
 no_sequences = 30
@@ -67,7 +67,7 @@ no_sequences = 30
 sequence_length = 30
 
 # Folder start
-start_folder = 0
+start_folder = 30
 
 for action in actions:
     dir_path = os.path.join(DATA_PATH, action)
@@ -92,7 +92,7 @@ with mp_holistic.Holistic(min_detection_confidence=0, min_tracking_confidence=0)
     # Loop through actions
     for action in actions:
         # Loop through sequences aka videos
-        for sequence in range(start_folder, start_folder+no_sequences):
+        for sequence in range(start_folder, (start_folder+sequence_length)):
             # Loop through video length aka sequence length
             for frame_num in range(sequence_length):
 
