@@ -50,7 +50,7 @@ def extract_keypoints(results):
     return np.concatenate([pose, face, lh, rh])
 
 
-
+#module for collecting data
 
 
 
