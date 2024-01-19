@@ -3,7 +3,12 @@ from huggingface_hub import InferenceClient
 endpoint_url = "https://your-endpoint-url-here"
 
 prompt = "Tell me about AI"
-
+prompt_template=f'''<|im_start|>system
+{system_message}<|im_end|>
+<|im_start|>user
+{prompt}<|im_end|>
+<|im_start|>assistant
+'''
 
 client = InferenceClient(endpoint_url)
 response = client.text_generation(prompt,
