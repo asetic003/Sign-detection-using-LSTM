@@ -1,6 +1,7 @@
 from huggingface_hub import InferenceClient
 
 endpoint_url = "https://your-endpoint-url-here"
+# jfiosfkoasgj
 
 prompt = "Tell me about AI"
 prompt_template=f'''<|im_start|>system
